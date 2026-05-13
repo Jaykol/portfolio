@@ -1,0 +1,141 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-surface: var(--surface);
+  --font-mono: "JetBrains Mono", "Space Mono", ui-monospace, monospace;
+  --font-sans: "DM Sans", "Manrope", ui-sans-serif, system-ui;
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(0.17 0.02 250);
+  --foreground: oklch(0.95 0.01 240);
+  --surface: oklch(0.21 0.025 250);
+  --card: oklch(0.21 0.025 250);
+  --card-foreground: oklch(0.95 0.01 240);
+  --popover: oklch(0.21 0.025 250);
+  --popover-foreground: oklch(0.95 0.01 240);
+  --primary: oklch(0.82 0.16 220);
+  --primary-foreground: oklch(0.15 0.02 250);
+  --secondary: oklch(0.27 0.03 250);
+  --secondary-foreground: oklch(0.95 0.01 240);
+  --muted: oklch(0.25 0.02 250);
+  --muted-foreground: oklch(0.68 0.02 240);
+  --accent: oklch(0.82 0.16 220);
+  --accent-foreground: oklch(0.15 0.02 250);
+  --success: oklch(0.85 0.2 155);
+  --warning: oklch(0.83 0.15 85);
+  --destructive: oklch(0.65 0.22 27);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.3 0.03 240);
+  --input: oklch(0.27 0.03 250);
+  --ring: oklch(0.82 0.16 220);
+}
+
+.dark {
+  --background: oklch(0.17 0.02 250);
+  --foreground: oklch(0.95 0.01 240);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    background-image:
+      radial-gradient(circle at 20% 10%, color-mix(in oklab, var(--primary) 8%, transparent), transparent 40%),
+      radial-gradient(circle at 80% 90%, color-mix(in oklab, var(--success) 5%, transparent), transparent 40%);
+    background-attachment: fixed;
+  }
+  ::selection { background: color-mix(in oklab, var(--primary) 35%, transparent); color: var(--foreground); }
+}
+
+@layer utilities {
+  .font-mono { font-family: var(--font-mono); }
+  .font-sans { font-family: var(--font-sans); }
+  .text-cyber { color: oklch(0.82 0.16 220); }
+  .text-success { color: var(--color-success); }
+  .text-warning { color: var(--color-warning); }
+  .bg-surface { background-color: var(--color-surface); }
+
+  .glow-border {
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-border);
+  }
+  .glow-border:hover {
+    border-color: color-mix(in oklab, var(--primary) 60%, transparent);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    transform: translateY(-2px);
+  }
+  .tag-glow {
+    transition: all 0.2s ease;
+  }
+  .tag-glow:hover {
+    border-color: color-mix(in oklab, var(--primary) 70%, transparent);
+    box-shadow: 0 0 12px rgba(0, 212, 255, 0.4);
+    color: var(--primary);
+  }
+
+  .dot-grid {
+    background-image: radial-gradient(circle, color-mix(in oklab, var(--primary) 25%, transparent) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .blink-cursor::after {
+    content: "▋";
+    color: var(--primary);
+    animation: blink 1s steps(2, start) infinite;
+    margin-left: 2px;
+  }
+  @keyframes blink {
+    to { visibility: hidden; }
+  }
+
+  .fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-up.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, oklch(0.82 0.16 220), oklch(0.85 0.2 155));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
