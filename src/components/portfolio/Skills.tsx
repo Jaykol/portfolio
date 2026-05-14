@@ -2,14 +2,17 @@ import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
 
 const groups: { label: string; skills: string[] }[] = [
-  { label: "Cloud & IaC", skills: ["AWS (EC2, RDS, VPC, IAM, S3, CloudTrail, CloudWatch, WAF)", "Terraform"] },
-  { label: "Containers & Orchestration", skills: ["Docker", "Kubernetes", "Helm", "Minikube", "Docker Compose"] },
-  { label: "CI/CD & DevSecOps", skills: ["GitHub Actions", "GitLab CI", "Gitleaks", "Semgrep", "Snyk", "Trivy", "SARIF"] },
-  { label: "Monitoring", skills: ["Prometheus", "Grafana", "Alertmanager"] },
-  { label: "Security", skills: ["Incident Response", "Penetration Testing", "Vulnerability Assessment", "SAST", "Container Scanning", "CVE Triage", "Cloud Forensics", "Fortinet Firewall", "VPN", "IAM Hardening"] },
-  { label: "Infrastructure & Ops", skills: ["FinOps / Cloud Cost Optimization", "Access Control Systems", "CCTV", "Office 365", "Active Directory", "Project Leadership"] },
-  { label: "Scripting", skills: ["Bash", "Python", "PowerShell", "ShellCheck"] },
-  { label: "OS & Networking", skills: ["Linux (Ubuntu/CentOS/Kali)", "TCP/IP", "DNS", "DHCP", "Wireless", "Firewall Admin"] },
+  { label: "Cloud Engineering", skills: ["AWS (EC2, RDS, VPC, IAM, S3, CloudTrail, CloudWatch, WAF, Route53, ELB)", "Azure Fundamentals", "Landing Zones", "VPC Design", "High Availability", "Disaster Recovery", "Cloud Migration"] },
+  { label: "Infrastructure as Code", skills: ["Terraform", "CloudFormation", "Ansible", "Modular IaC", "Remote State", "Drift Detection"] },
+  { label: "DevOps & CI/CD", skills: ["GitHub Actions", "GitLab CI", "Jenkins", "Build Pipelines", "Release Automation", "Blue/Green Deploys", "GitOps", "Artifact Management"] },
+  { label: "Containers & Orchestration", skills: ["Docker", "Kubernetes", "Helm", "Minikube", "Docker Compose", "EKS"] },
+  { label: "DevSecOps & AppSec", skills: ["Gitleaks", "Semgrep", "Snyk", "Trivy", "SARIF", "SAST", "Container Scanning", "Policy as Code", "Shift-Left Security"] },
+  { label: "Systems Administration", skills: ["Linux (Ubuntu/CentOS/Kali)", "Windows Server", "Active Directory", "Group Policy", "Microsoft 365", "Patch Management", "Backup & Recovery", "User Provisioning"] },
+  { label: "Networking", skills: ["TCP/IP", "DNS", "DHCP", "VLANs", "Routing & Switching", "VPN", "Wireless", "Fortinet Firewall", "Juniper (JNCIA)", "Network Monitoring"] },
+  { label: "Observability & SRE", skills: ["Prometheus", "Grafana", "Alertmanager", "CloudWatch", "Log Aggregation", "SLOs", "Incident Response"] },
+  { label: "Security & Compliance", skills: ["Incident Response", "Cloud Forensics", "IAM Hardening", "Zero Trust", "Vulnerability Assessment", "Penetration Testing", "CVE Triage"] },
+  { label: "FinOps & Leadership", skills: ["Cloud Cost Optimization", "Right-Sizing", "Reserved Capacity Planning", "Project Leadership", "Stakeholder Reporting", "Vendor Management"] },
+  { label: "Scripting & Automation", skills: ["Bash", "Python", "PowerShell", "ShellCheck", "Cron", "Systemd"] },
 ];
 
 export function Skills() {

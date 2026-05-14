@@ -6,8 +6,8 @@ const certs = [
   { name: "Google Cybersecurity Professional Certificate", issuer: "Google", year: "2026", status: "completed" },
   { name: "Google IT Support Professional Certificate", issuer: "Google", year: "2025", status: "completed" },
   { name: "Juniper JNCIA-Junos", issuer: "Juniper Networks", year: "2022", status: "completed" },
-  { name: "AWS Certified Solutions Architect Associate", issuer: "Amazon", year: "2025", status: "course" },
-  { name: "Microsoft AZ-900: Azure Fundamentals", issuer: "Microsoft", year: "2025", status: "course" },
+  { name: "AWS Solutions Architect Associate — Course Completion", issuer: "Stephane Maarek (Udemy)", year: "2025", status: "course" },
+  { name: "Microsoft AZ-900 Azure Fundamentals — Course Completion", issuer: "Udemy", year: "2025", status: "course" },
   { name: "Microsoft 365 Administration", issuer: "LinkedIn Learning", year: "2025", status: "completed" },
 ] as const;
 
@@ -16,6 +16,11 @@ export function Certifications() {
     <section id="certifications" className="py-24 border-t border-border">
       <div className="max-w-6xl mx-auto px-6">
         <Reveal><SectionHeading>cat certifications.txt</SectionHeading></Reveal>
+        <Reveal delay={80}>
+          <p className="text-sm text-muted-foreground mb-8 max-w-3xl font-mono">
+            <span className="text-success"># note:</span> entries marked <span className="text-warning">Course Completion</span> are training programs I finished — not proctored certification exams. Listed transparently for clarity.
+          </p>
+        </Reveal>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {certs.map((c, i) => (
             <Reveal key={c.name} delay={i * 60}>
@@ -36,7 +41,7 @@ export function Certifications() {
                     </span>
                   ) : (
                     <span className="inline-flex items-center gap-1.5 font-mono text-[11px] px-2.5 py-1 rounded-full border" style={{ borderColor: "color-mix(in oklab, var(--warning) 50%, transparent)", color: "var(--warning)" }}>
-                      📘 Course Completed
+                      📘 Course Completion (not certified exam)
                     </span>
                   )}
                 </div>

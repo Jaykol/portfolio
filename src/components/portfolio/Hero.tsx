@@ -24,11 +24,11 @@ export function Hero() {
         <div className="mt-6 font-mono text-xl md:text-2xl">
           <span className="text-muted-foreground">&gt; </span>
           <span className="text-cyber">
-            <Typewriter words={["DevSecOps Engineer", "Cloud Security Specialist", "Infrastructure Automation"]} />
+            <Typewriter words={["Cloud Engineer", "DevOps Engineer", "DevSecOps Engineer", "Systems Administrator", "Cloud Security Consultant"]} />
           </span>
         </div>
         <p className="mt-8 max-w-2xl text-muted-foreground text-lg leading-relaxed">
-          7 years building and securing infrastructure — from 3,500-node networks to zero-trust AWS environments. Based in Lagos, Nigeria.
+          Senior cloud and infrastructure consultant with 7 years designing, automating, and securing systems — from 3,500-node enterprise networks to zero-trust AWS environments. I help teams ship resilient, cost-efficient, security-gated infrastructure. Based in Lagos, Nigeria.
         </p>
         <div className="mt-10 flex flex-wrap items-center gap-4">
           <a

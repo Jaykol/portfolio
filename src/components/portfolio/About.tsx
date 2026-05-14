@@ -3,9 +3,9 @@ import { Reveal } from "./Reveal";
 import { CountUp } from "./CountUp";
 
 const stats = [
-  { value: 7, suffix: "+", label: "Years of Experience" },
-  { value: 52.4, suffix: "%", decimals: 1, label: "AWS Cost Reduction Achieved" },
-  { value: 7, suffix: "", label: "DevSecOps Portfolio Projects" },
+  { value: 7, suffix: "+", label: "Years across Sysadmin, Cloud & DevSecOps" },
+  { value: 52.4, suffix: "%", decimals: 1, label: "AWS Monthly Spend Reduced" },
+  { value: 3500, suffix: "+", label: "Nodes Administered at Scale" },
 ];
 
 export function About() {
@@ -15,7 +15,7 @@ export function About() {
         <Reveal><SectionHeading prompt=">">whoami</SectionHeading></Reveal>
         <Reveal delay={100}>
           <p className="text-lg leading-relaxed text-muted-foreground max-w-4xl">
-            I'm a DevSecOps engineer with 7 years across IT infrastructure, network operations, and cloud security. I traced a live AWS account compromise through CloudTrail logs, shut it down, and recovered the full cost from AWS. I cut monthly AWS spend by 52.4% through systematic right-sizing. I've built a 7-project DevSecOps portfolio spanning Bash, Docker, GitHub Actions, Terraform, Kubernetes, Prometheus, and security-gated pipelines with Gitleaks, Semgrep, Snyk, and Trivy. I bring a genuine security-first mindset to every layer of infrastructure I build.
+            I operate at the intersection of <span className="text-foreground">systems administration, cloud engineering, DevOps, and security</span>. Over seven years I've built and run production infrastructure end-to-end — from administering 3,500-node enterprise networks and Active Directory estates, to architecting AWS landing zones, automating delivery with Terraform and GitHub Actions, and orchestrating workloads on Kubernetes. I traced a live AWS account compromise through CloudTrail, contained it, and recovered the full spend from AWS. I cut monthly AWS spend by 52.4% through disciplined right-sizing and FinOps. I lead with a senior consultant's lens: clear trade-offs, measurable outcomes, and security gated into every layer — not bolted on after.
           </p>
         </Reveal>
         <div className="grid sm:grid-cols-3 gap-6 mt-12">

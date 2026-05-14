@@ -72,14 +72,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Jesutofunmi Ajekola — DevSecOps Engineer" },
+      { name: "description", content: "Portfolio of Jesutofunmi (John) Ajekola — DevSecOps engineer and cloud security specialist based in Lagos, Nigeria." },
+      { name: "author", content: "Jesutofunmi Ajekola" },
+      { property: "og:title", content: "Jesutofunmi Ajekola — DevSecOps Engineer" },
+      { property: "og:description", content: "DevSecOps and cloud security portfolio — AWS, Kubernetes, Terraform, and security-gated CI/CD." },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Jesutofunmi Ajekola" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
