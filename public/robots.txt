@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://john-codes-live.jesutofunmi.app/sitemap.xml
