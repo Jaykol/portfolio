@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 import { Typewriter } from "./Typewriter";
+import { PortraitSwap } from "./PortraitSwap";
 
 export function Hero() {
   return (
@@ -18,9 +19,14 @@ export function Hero() {
       </div>
       <div className="max-w-6xl mx-auto px-6 pt-24 pb-28 md:pt-32 md:pb-36 relative">
         <p className="font-mono text-sm text-success mb-6">$ ./init --portfolio</p>
-        <h1 className="font-mono text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-[1.05]">
-          Jesutofunmi <span className="gradient-text">(John)</span><br />Ajekola
-        </h1>
+        <div className="flex items-center gap-5 md:gap-7">
+          <h1 className="font-mono text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-[1.05]">
+            Jesutofunmi <span className="gradient-text">(John)</span><br />Ajekola
+          </h1>
+          <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 shrink-0">
+            <PortraitSwap />
+          </div>
+        </div>
         <div className="mt-6 font-mono text-xl md:text-2xl">
           <span className="text-muted-foreground">&gt; </span>
           <span className="text-cyber">
